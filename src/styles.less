@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "app/style/colors";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Volle Höhe des Viewports */
+  width: 100%;  /* Volle Breite des Viewports */
+
+  background-color: @DarkGray;
+}
+
+app-root {
+  display: block; /* Stellt sicher, dass app-root wie ein Block-Element funktioniert */
+  height: 100%;   /* Füllt den gesamten verfügbaren Platz */
+  width: 100%;    /* Deckt die gesamte Breite ab */
+}
+
