@@ -1,21 +1,27 @@
 @import "src/app/style/colors";
 
 :host {
-  display: flex;
-  flex-direction: row;
+  width: 100vw;
 
-  background-color: @DarkGray;
+  position: absolute;
+  bottom: 0;
 
-  width: auto;
-  justify-content: space-around;
+  .row {
+    margin: 0 400px;
+    width: auto;
 
-  padding: 0 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-  .link {
-    background-color: @LightGray;
-    height: 32px;
-    width: 150px;
-    text-align: center;
+    .link {
+      background-color: @LightGray;
+      height: 32px;
+      width: 150px;
+      text-align: center;
+      align-content: center;
+
+      cursor: pointer;
+    }
   }
 }
-
