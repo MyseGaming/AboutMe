@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import {HeaderComponent} from "../components/header/header.component";
+import {HeaderComponent} from '../components/header/header.component';
 import {PageContentComponent} from '../components/page-content/page-content.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-about-me',
   imports: [
     HeaderComponent,
     PageContentComponent
   ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.less'
+  templateUrl: './about-me.component.html',
+  styleUrl: './about-me.component.less'
 })
-export class HomeComponent {
+export class AboutMeComponent {
 
 }
