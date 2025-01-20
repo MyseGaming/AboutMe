@@ -1,5 +1,25 @@
 <app-header>
   Projects
 </app-header>
-<app-parallax-scroll-page>
+
+<ng-template #intro>
+  <app-horizontal-pages>
+    <app-horizontal-page >
+      Page 1
+    </app-horizontal-page>
+
+    <app-horizontal-page>
+      <h3>
+        Page 2
+      </h3>
+    </app-horizontal-page>
+  </app-horizontal-pages>
+</ng-template>
+
+<ng-template #content>
+  <h1>Tschau!</h1>
+</ng-template>
+
+<app-parallax-scroll-page *ngFor="let pageData of parallaxPageData" [data]="pageData">
+  <ng-container *ngTemplateOutlet="pageData.template"></ng-container>
 </app-parallax-scroll-page>
