@@ -1,5 +1,42 @@
+@import "src/app/style/colors";
+
 :host {
   display: block;
   height: 100%;
   width: 100%;
+
+  font-size: 1.5rem;
+
+  .person-data {
+    color: @DarkGray;
+
+    .person-data-content {
+      width: 35%;
+      margin-left: auto;
+      text-align: center;
+
+      .person-data-text {
+        text-align: left;
+      }
+    }
+  }
+
+  .standard-data {
+    display: block;
+    height: 50%;
+
+    background-color: white;
+    color: @DarkGray;
+
+    .standard-data-content {
+      width: 35%;
+      margin-left: 116px;
+      margin-right: auto;
+      text-align: left;
+
+      .standard-data-text {
+        text-align: left;
+      }
+    }
+  }
 }

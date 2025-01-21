@@ -3,9 +3,15 @@
 </app-header>
 <app-slide-show>
   <app-slide>
-    <app-parallax-scroll-section [data]="personData">
-      <h1>PersonData!</h1>
-      Ich bin Morten Diestelhorst, ein Softwareentwickler mit Fokus auf Embedded C++ sowie Weblösungen für Embedded-Anwendungen. Meine Erfahrung reicht von der Entwicklung hardwarenaher Software bis zur Erstellung moderner Benutzeroberflächen für eingebettete Systeme.
+    <app-parallax-scroll-section [data]="personData" class="person-data">
+      <div class="person-data-content">
+        <h3>Morten Diestelhorst</h3>
+        <div class="person-data-text">
+          Hi! Ich bin ein Softwareentwickler mit Fokus auf Embedded C++ sowie Weblösungen für
+          Embedded-Anwendungen. Meine Erfahrung reicht von der Entwicklung hardwarenaher Software bis zur Erstellung
+          moderner Benutzeroberflächen für eingebettete Systeme.
+        </div>
+      </div>
     </app-parallax-scroll-section>
   </app-slide>
 
@@ -16,40 +22,13 @@
   </app-slide>
 </app-slide-show>
 
-<app-parallax-scroll-section [data]="standardData">
-
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
-  <h1>Data With Shitload of Content!</h1>
+<app-parallax-scroll-section [data]="standardData" class="standard-data">
+  <div class="standard-data-content">
+    <h3>Technologien</h3>
+    <div class="standard-data-text">
+      C++17, Angular, Electron, Node.js, HTML, CSS
+    </div>
+  </div>
 </app-parallax-scroll-section>
 <app-parallax-scroll-section [data]="solutionData">
   <h1>SolutionData!</h1>

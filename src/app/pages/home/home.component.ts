@@ -18,9 +18,9 @@ import {ParallaxData} from '../components/parallax-scroll-section/parallax-data'
 })
 export class HomeComponent {
   personData: ParallaxData = {
-    imageUrl: 'assets/Images/pexels-pixabay-355952.jpg',
-    textColor: 'white',
-    blurImage: true
+    imageUrl: 'assets/Images/MACIO_Kiel_3060.jpg',
+    textColor: 'black',
+    blurImage: false,
   }
 
   solutionData: ParallaxData = {
@@ -30,6 +30,6 @@ export class HomeComponent {
   }
 
   standardData: ParallaxData = {
-    textColor: 'white',
+    textColor: '',
   }
 }
