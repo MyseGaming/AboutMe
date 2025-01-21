@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParallaxScrollPageComponent } from './parallax-scroll-page.component';
+import { ParallaxScrollSectionComponent } from './parallax-scroll-section.component';
 
 describe('ParallaxScrollPageComponent', () => {
-  let component: ParallaxScrollPageComponent;
-  let fixture: ComponentFixture<ParallaxScrollPageComponent>;
+  let component: ParallaxScrollSectionComponent;
+  let fixture: ComponentFixture<ParallaxScrollSectionComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ParallaxScrollPageComponent]
+      imports: [ParallaxScrollSectionComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ParallaxScrollPageComponent);
+    fixture = TestBed.createComponent(ParallaxScrollSectionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

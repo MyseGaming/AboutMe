@@ -1,0 +1,5 @@
+<ng-content>
+</ng-content>
+<div class="page-buttons">
+  <button *ngFor="let page of slides.toArray(); let i = index" (click)="showPage(i)">Zeige Seite {{ i + 1 }}</button>
+</div>

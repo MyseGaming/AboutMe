@@ -1,51 +1,50 @@
-import {ChangeDetectorRef, Component, TemplateRef, ViewChild} from '@angular/core';
+import {Component} from '@angular/core';
 import {HeaderComponent} from '../components/header/header.component';
-import {ParallaxScrollPageComponent} from '../components/parallax-scroll-page/parallax-scroll-page.component';
-import {ParallaxData} from '../components/parallax-scroll-page/parallax-data';
+import {ParallaxData} from '../components/parallax-scroll-section/parallax-data';
 import {CommonModule} from '@angular/common';
-import {HorizontalPagesComponent} from '../components/horizontal-pages/horizontal-pages.component';
-import {HorizontalPageComponent} from '../components/horizontal-pages/horizontal-page/horizontal-page.component';
+import {SlideShowComponent} from '../components/slide-show/slide-show.component';
+import {ParallaxScrollSectionComponent} from '../components/parallax-scroll-section/parallax-scroll-section.component';
+import {SlideComponent} from '../components/slide-show/slide/slide.component';
 
 @Component({
   selector: 'app-projects',
   imports: [
     HeaderComponent,
-    ParallaxScrollPageComponent,
     CommonModule,
-    HorizontalPagesComponent,
-    HorizontalPageComponent
+    SlideShowComponent,
+    ParallaxScrollSectionComponent,
+    SlideComponent
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.less'
 })
 export class ProjectsComponent {
-  @ViewChild('intro') templateIntro!: TemplateRef<any>;
-  @ViewChild('content') templateContent!: TemplateRef<any>;
+  personData: ParallaxData = {
+    imageUrl: 'assets/Images/pexels-pixabay-355952.jpg',
+    textColor: 'white',
+    blurImage: true
+  }
 
-  constructor(
-    private cd: ChangeDetectorRef) {
+  solutionData: ParallaxData = {
+    imageUrl: 'assets/Images/pexels-diva-plavalaguna-6147357.jpg',
+    textColor: 'black',
+    blurImage: true
+  }
+
+  standardData: ParallaxData = {
+    textColor: 'white',
   }
 
   parallaxPageData: ParallaxData[] = [
     {
-      imageUrl: 'assets/Images/pexels-pixabay-355952.jpg',
       textColor: 'white',
-      blurImage: false,
-      template: null, // Platzhalter
+      blurImage: false
     },
     {
       imageUrl: 'assets/Images/pexels-diva-plavalaguna-6147357.jpg',
       textColor: 'black',
-      blurImage: true,
-      template: null, // Platzhalter
+      blurImage: true
     },
   ];
-
-  ngAfterViewInit() {
-    this.parallaxPageData[0].template = this.templateIntro;
-    this.parallaxPageData[1].template = this.templateContent;
-
-    this.cd.detectChanges();
-  }
 
 }
