@@ -5,6 +5,8 @@ import {ParallaxScrollSectionComponent} from "../components/parallax-scroll-sect
 import {ParallaxData} from '../components/parallax-scroll-section/parallax-data';
 import {CurriculumVitaeComponent} from '../components/curriculum-vitae/curriculum-vitae.component';
 import {CVEntryComponent} from '../components/curriculum-vitae/cventry/cventry.component';
+import {NgForOf} from '@angular/common';
+import {CVData} from '../../constants/CVData';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +15,8 @@ import {CVEntryComponent} from '../components/curriculum-vitae/cventry/cventry.c
     SlideShowComponent,
     ParallaxScrollSectionComponent,
     CurriculumVitaeComponent,
-    CVEntryComponent
+    CVEntryComponent,
+    NgForOf
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.less'
@@ -34,4 +37,6 @@ export class HomeComponent {
   standardData: ParallaxData = {
     textColor: '',
   }
+
+  public cvEntries = CVData;
 }

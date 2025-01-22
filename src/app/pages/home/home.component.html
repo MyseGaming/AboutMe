@@ -16,18 +16,17 @@
 <app-parallax-scroll-section [data]="standardData" class="techstack">
   <div class="techstack-container">
     <div class="icon-cpp-large"></div>
+    <div class="icon-angular-large"></div>
   </div>
 </app-parallax-scroll-section>
 
 <app-parallax-scroll-section [data]="standardData" class="standard-data">
   <div class="standard-data-content">
     <h3>My Journey</h3>
-    <div class="standard-data-text">
-      C++17, Angular, Electron, Node.js, HTML, CSS
-    </div>
     <app-curriculum-vitae>
-      <app-cventry>
-        Current: [Your Company Name]
+      <app-cventry *ngFor="let cvEntry of cvEntries.jobExperience" [entry]="cvEntry">
+      </app-cventry>
+      <app-cventry *ngFor="let cvEntry of cvEntries.education" [entry]="cvEntry">
       </app-cventry>
     </app-curriculum-vitae>
   </div>

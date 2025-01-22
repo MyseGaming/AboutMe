@@ -1,4 +1,5 @@
-@icon-cpp: '/assets/icons/c.svg';
+@icon-cpp: '/assets/icons/cpp.svg';
+@icon-angular: '/assets/icons/angular.svg';
 
 .icon-small(@icon-path) {
   width: 24px;
@@ -16,7 +17,7 @@
 }
 
 
-.icon-lage(@icon-path) {
+.icon-large(@icon-path) {
   width: 46px;
   height: 46px;
   background: url('@{icon-path}') no-repeat center center;
@@ -31,8 +32,11 @@
   .icon-medium(@icon-cpp);
 }
 
-
 .icon-cpp-large {
-  .icon-lage(@icon-cpp);
+  .icon-large(@icon-cpp);
+}
+
+.icon-angular-large {
+  .icon-large(@icon-angular);
 }
 

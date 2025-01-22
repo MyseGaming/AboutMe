@@ -1,0 +1,38 @@
+@import "src/app/style/colors";
+
+:host {
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 14px;
+  border-bottom: 2px solid @DarkGray;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .site {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  .entry {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+
+    .entry-data {
+      display: flex;
+      flex-direction: column;
+      min-width: 256px;
+
+      justify-content: center;
+    }
+
+    .entry-description {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  }
+}

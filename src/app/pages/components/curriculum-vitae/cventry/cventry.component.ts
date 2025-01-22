@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {CVEntryData} from './cventrydata';
 
 @Component({
   selector: 'app-cventry',
@@ -7,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './cventry.component.less'
 })
 export class CVEntryComponent {
-
+  @Input() public entry!: CVEntryData;
 }
