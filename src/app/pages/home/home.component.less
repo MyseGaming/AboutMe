@@ -5,37 +5,46 @@
   height: 100%;
   width: 100%;
 
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+
+  text-align: left;
+  color: @DarkGray;
 
   .person-data {
-    color: @DarkGray;
 
     .person-data-content {
       width: 35%;
       margin-left: auto;
-      text-align: center;
+      padding-top: 18vh;
 
-      .person-data-text {
-        text-align: left;
+      .name {
+        font-size: 5rem;
+        line-height: 7.5rem;
+        font-weight: 500;
+        margin-bottom: 32px;
       }
     }
   }
 
-  .standard-data {
-    display: block;
-    height: 50%;
+  .techstack {
+    .techstack-container {
+      background-color: @RegularGray;
+      height: 180px;
+    }
+  }
 
-    background-color: white;
-    color: @DarkGray;
+
+  .standard-data {
 
     .standard-data-content {
-      width: 35%;
-      margin-left: 116px;
+      min-width: 50%;
+      max-width: 60%;
+      margin-left: auto;
       margin-right: auto;
-      text-align: left;
+      padding-top: 18vh;
 
       .standard-data-text {
-        text-align: left;
       }
     }
   }

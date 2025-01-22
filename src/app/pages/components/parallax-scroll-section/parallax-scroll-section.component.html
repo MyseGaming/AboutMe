@@ -1,4 +1,4 @@
-<div class="parallax-container">
+<div class="parallax-container" [ngClass]="{'full-size': data.imageUrl !== undefined}">
   <div *ngIf="data.imageUrl !== undefined" class="parallax-background" [ngClass]="{'blur': data.blurImage}"
        [ngStyle]="{ 'background-image': 'url(' + data.imageUrl + ')' }"></div>
   <div class="section-content" [ngStyle]="{ 'color': data.textColor }">

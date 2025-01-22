@@ -3,9 +3,12 @@
 }
 
 .parallax-container {
-  min-height: 100vh; /* Jede Sektion nimmt die volle Höhe ein */
   overflow: hidden;
   position: relative;
+
+  &.full-size {
+    min-height: 100vh;
+  }
 }
 
 .parallax-background {
@@ -30,5 +33,4 @@
 /* Beispiel für Inhalt */
 .section-content {
   position: relative;
-  padding-top: 30vh;
 }

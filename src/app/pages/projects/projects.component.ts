@@ -20,13 +20,13 @@ import {SlideComponent} from '../components/slide-show/slide/slide.component';
 })
 export class ProjectsComponent {
   personData: ParallaxData = {
-    imageUrl: 'assets/Images/pexels-pixabay-355952.jpg',
+    imageUrl: 'assets/images/pexels-pixabay-355952.jpg',
     textColor: 'white',
     blurImage: true
   }
 
   solutionData: ParallaxData = {
-    imageUrl: 'assets/Images/pexels-diva-plavalaguna-6147357.jpg',
+    imageUrl: 'assets/images/pexels-diva-plavalaguna-6147357.jpg',
     textColor: 'black',
     blurImage: true
   }
@@ -41,7 +41,7 @@ export class ProjectsComponent {
       blurImage: false
     },
     {
-      imageUrl: 'assets/Images/pexels-diva-plavalaguna-6147357.jpg',
+      imageUrl: 'assets/images/pexels-diva-plavalaguna-6147357.jpg',
       textColor: 'black',
       blurImage: true
     },
