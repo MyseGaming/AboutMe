@@ -1,0 +1,38 @@
+@icon-cpp: '/assets/icons/c.svg';
+
+.icon-small(@icon-path) {
+  width: 24px;
+  height: 24px;
+  background: url('@{icon-path}') no-repeat center center;
+  background-size: contain;
+}
+
+
+.icon-medium(@icon-path) {
+  width: 32px;
+  height: 32px;
+  background: url('@{icon-path}') no-repeat center center;
+  background-size: contain;
+}
+
+
+.icon-lage(@icon-path) {
+  width: 46px;
+  height: 46px;
+  background: url('@{icon-path}') no-repeat center center;
+  background-size: contain;
+}
+
+.icon-cpp-small {
+  .icon-small(@icon-cpp);
+}
+
+.icon-cpp-medium {
+  .icon-medium(@icon-cpp);
+}
+
+
+.icon-cpp-large {
+  .icon-lage(@icon-cpp);
+}
+
