@@ -1,11 +1,22 @@
 @import "src/app/style/colors";
+@import "src/app/style/icons";
 
 :host {
   display: flex;
   flex-direction: column;
 
   padding-bottom: 14px;
-  border-bottom: 2px solid @DarkGray;
+
+  &.light {
+    border-bottom: 2px solid @DarkGray;
+    color: @DarkGray;
+  }
+
+  &.dark {
+    border-bottom: 2px solid @LightGray;
+    color: @LightGray;
+  }
+
 
   .title {
     font-size: 2rem;
@@ -27,7 +38,13 @@
       flex-direction: column;
       min-width: 256px;
 
-      justify-content: center;
+      padding-top: 16px;
+
+      .technologies {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+      }
     }
 
     .entry-description {
