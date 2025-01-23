@@ -1,5 +1,84 @@
 :host {
-  &.hidden {
-    display: none;
+  overflow: hidden;
+  position: relative;
+  right: 0;
+  min-width: 0;
+  z-index: 0;
+
+  &.shrink-left {
+    left: 0;
+    right: auto;
+    max-width: 0;
+    width: 0;
+    min-width: 0;
+
+    animation-name: shrink;
+    animation-duration: 1s;
+  }
+
+  &.grow-left {
+    left: 0;
+    right: auto;
+    max-width: 100vw;
+    width: 100vw;
+    min-width: 100vw;
+
+    animation-name: grow;
+    animation-duration: 1s;
+  }
+
+  &.current-page {
+    max-width: 100vw;
+    width: 100vw;
+    min-width: 100vw;
+
+    animation-name: grow;
+    animation-duration: 1s;
+  }
+
+  &.shrink-right {
+    right: 0;
+    max-width: 0;
+    width: 0;
+    min-width: 0;
+
+    animation-name: shrink;
+    animation-duration: 1s;
+  }
+
+  &.grow-right {
+    right: 0;
+    max-width: 100vw;
+    width: 100vw;
+    min-width: 100vw;
+
+    animation-name: grow;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes grow {
+  from {
+    min-width: 0;
+    max-width: 0;
+    width: 0;
+  }
+  to {
+    min-width: 100vw;
+    max-width: 100vw;
+    width: 100vw;
+  }
+}
+
+@keyframes shrink {
+  from {
+    min-width: 100vw;
+    max-width: 100vw;
+    width: 100vw;
+  }
+  to {
+    min-width: 0;
+    max-width: 0;
+    width: 0;
   }
 }

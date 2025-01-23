@@ -1,5 +1,7 @@
-<ng-content>
-</ng-content>
+<div class="slides-container">
+  <ng-content>
+  </ng-content>
+</div>
 <div *ngIf="slides.length > 1" class="page-buttons">
   <button *ngFor="let page of slides.toArray(); let i = index" (click)="showPage(i)">Zeige Seite {{ i + 1 }}</button>
 </div>
