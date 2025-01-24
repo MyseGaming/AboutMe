@@ -2,39 +2,37 @@ import {AfterContentInit, Component, ContentChildren, QueryList} from '@angular/
 import {SlideComponent} from './slide/slide.component';
 import {CommonModule} from '@angular/common';
 import {BehaviorSubject, mergeMap, of} from 'rxjs';
+import {SlideButtonComponent} from './slide-button/slide-button.component';
 
 @Component({
   selector: 'app-slide-show',
   imports: [
-    CommonModule
+    CommonModule,
+    SlideButtonComponent
   ],
   templateUrl: './slide-show.component.html',
   styleUrl: './slide-show.component.less'
 })
 export class SlideShowComponent implements AfterContentInit {
   currentPage$: BehaviorSubject<number>;
-  currentPage: number = 0;
+  currentPage: number = 0; // Standardmäßig erstes Slide
 
   @ContentChildren(SlideComponent)
   slides!: QueryList<SlideComponent>;
 
   constructor() {
-    this.currentPage$ = new BehaviorSubject(this.currentPage); // Standardmäßig erste Seite anzeigen
+    this.currentPage$ = new BehaviorSubject(this.currentPage);
   }
 
   ngAfterContentInit() {
     this.slides.toArray().forEach((page: SlideComponent, index: number) => {
       page.pageIndex = index;
       page.currentPage = index === this.currentPage;
-      page.shrinkLeft = index === this.currentPage + 1;
       page.subscribeToDisplay(
-        this.currentPage$.pipe(mergeMap(currentPage => {
-          console.log('' + index + ': ' + Math.abs(index - currentPage));
-          return of(Math.abs(index - currentPage) <= 1)
-        }))
+        this.currentPage$.pipe(mergeMap(currentPage => of(Math.abs(index - currentPage) <= 1)))
       );
     });
-    this.currentPage$.next(this.currentPage);
+    this.showPage(this.currentPage);
   }
 
   showPage(index: number) {

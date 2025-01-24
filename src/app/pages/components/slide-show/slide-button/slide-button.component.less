@@ -1,0 +1,61 @@
+@import "src/app/style/colors";
+
+:host {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+  height: 16px;
+  width: 60px;
+  z-index: 2;
+
+  .circle {
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: @MediumGray;
+  }
+
+  .line {
+    width: 26px;
+    height: 2px;
+    background-color: @MediumGray;
+  }
+
+  &.first {
+    width: 30px;
+  }
+
+  &.last {
+    width: 30px;
+  }
+
+  &.active {
+    .circle {
+      background-color: white;
+    }
+
+    .left {
+      background: linear-gradient(to left, white, @MediumGray);
+    }
+
+    .right {
+      background: linear-gradient(to right, white, @MediumGray);
+    }
+  }
+
+  &:hover {
+    .circle {
+      background-color: white;
+    }
+
+    .left {
+      background: linear-gradient(to left, white, @MediumGray);
+    }
+
+    .right {
+      background: linear-gradient(to right, white, @MediumGray);
+    }
+  }
+}

@@ -1,35 +1,34 @@
 <app-slide-show>
   <app-slide>
-    <app-parallax-scroll-section [data]="personData" class="person-data">
+    <app-parallax-scroll-section [data]="personData">
       <div class="person-data-content">
         <div class="name">Morten Diestelhorst</div>
-        <div class="person-data-text">
+        <p class="person-data-text">
           Hi! Ich bin ein Softwareentwickler mit Fokus auf Embedded C++ sowie Weblösungen für
           Embedded-Anwendungen. Meine Erfahrung reicht von der Entwicklung hardwarenaher Software bis zur Erstellung
           moderner Benutzeroberflächen.
-        </div>
+        </p>
       </div>
     </app-parallax-scroll-section>
   </app-slide>
   <app-slide>
-    <app-parallax-scroll-section [data]="solutionData" class="solution-data">
-      Bli Bla Blub!
-    </app-parallax-scroll-section>
-  </app-slide>
-  <app-slide>
-    <app-parallax-scroll-section [data]="solutionData" class="solution-data">
-      Bli Bla Blub!
-    </app-parallax-scroll-section>
-  </app-slide>
-  <app-slide>
-    <app-parallax-scroll-section [data]="solutionData" class="solution-data">
-      Bli Bla Blub!
+    <app-parallax-scroll-section [data]="solutionData">
+      <div class="additional-data-content">
+        <div class="name">Mehr Rätsel bitte?</div>
+        <div class="person-data-text">
+          <p>Ich bin neugierig und liebe es, mich durch neue Projekte herauszufordern. Egal ob beruflich oder privat:
+            Ich tauche gerne tief in neue Themen ein, um zu verstehen, wie Dinge funktionieren, sie zu meistern und
+            Ideen umzusetzen.</p>
+          <p>Wenn du mehr darüber erfahren möchtest, schau gerne bei meinen privaten Projekten vorbei!</p>
+        </div>
+      </div>
     </app-parallax-scroll-section>
   </app-slide>
 </app-slide-show>
 
 <app-parallax-scroll-section [data]="standardData" class="techstack">
-  <div class="techstack-container" >
+  <div class="techstack-container">
+    <h3>Technologien: </h3>
     <div [class]="Icons.Angular"></div>
     <div [class]="Icons.Typescript"></div>
     <div [class]="Icons.Html"></div>

@@ -1,3 +1,5 @@
+@import "src/app/style/colors";
+
 :host {
 
 
@@ -12,9 +14,16 @@
   .page-buttons {
     position: absolute;
     left: 0;
-    right: 0;
-    bottom: 16px;
-    margin-inline: auto;
-    width: fit-content;
+    bottom: 0;
+
+    width: 100vw;
+    height: 32px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(@DarkGray, 0.3);
   }
 }
