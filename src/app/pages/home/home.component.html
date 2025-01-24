@@ -3,7 +3,7 @@
     <app-parallax-scroll-section [data]="personData">
       <div class="person-data-content">
         <div class="name">Morten Diestelhorst</div>
-        <p class="person-data-text">
+        <p>
           Hi! Ich bin ein Softwareentwickler mit Fokus auf Embedded C++ sowie Weblösungen für
           Embedded-Anwendungen. Meine Erfahrung reicht von der Entwicklung hardwarenaher Software bis zur Erstellung
           moderner Benutzeroberflächen.
@@ -15,12 +15,10 @@
     <app-parallax-scroll-section [data]="solutionData">
       <div class="additional-data-content">
         <div class="name">Mehr Rätsel bitte?</div>
-        <div class="person-data-text">
-          <p>Ich bin neugierig und liebe es, mich durch neue Projekte herauszufordern. Egal ob beruflich oder privat:
-            Ich tauche gerne tief in neue Themen ein, um zu verstehen, wie Dinge funktionieren, sie zu meistern und
-            Ideen umzusetzen.</p>
-          <p>Wenn du mehr darüber erfahren möchtest, schau gerne bei meinen Projekten vorbei!</p>
-        </div>
+        <p>Ich bin neugierig und liebe es, mich durch neue Projekte herauszufordern. Egal ob beruflich oder privat:
+          Ich tauche gerne tief in neue Themen ein, um zu verstehen, wie Dinge funktionieren, sie zu meistern und
+          Ideen umzusetzen.</p>
+        <p>Wenn du mehr darüber erfahren möchtest, schau gerne bei meinen Projekten vorbei!</p>
       </div>
     </app-parallax-scroll-section>
   </app-slide>
@@ -52,11 +50,13 @@
     <app-curriculum-vitae>
       <app-cventry class="light" *ngFor="let cvEntry of cvEntries.jobExperience" [entry]="cvEntry">
       </app-cventry>
+      <h3>Education</h3>
       <app-cventry class="light" *ngFor="let cvEntry of cvEntries.education" [entry]="cvEntry">
       </app-cventry>
     </app-curriculum-vitae>
   </div>
 </app-parallax-scroll-section>
+
 <app-parallax-scroll-section [data]="standardData" class="projects-data">
   <div class="projects-data-content">
     <h3>My Projects</h3>

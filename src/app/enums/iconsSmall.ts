@@ -1,0 +1,16 @@
+export enum IconsSmall {
+  Angular = 'icon-angular-small ',
+  React = 'icon-reactjs-small ',
+  Cpp = 'icon-cpp-small ',
+  Typescript = 'icon-typescript-small ',
+  Html = 'icon-html-small ',
+  Css = 'icon-css-small ',
+  Electron = 'icon-electronjs-small ',
+  Node = 'icon-nodejs-small ',
+  Nest = 'icon-nestjs-small ',
+  Git = 'icon-git-small ',
+  JSON = 'icon-json-small ',
+  XML = 'icon-xml-small ',
+  Unreal = 'icon-unreal-small ',
+  Lua = 'icon-lua-small ',
+}

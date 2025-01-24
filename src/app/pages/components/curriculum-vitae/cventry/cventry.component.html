@@ -8,6 +8,14 @@
     <div *ngIf="entry.technologies" class="technologies">
       <div *ngFor="let tech of entry.technologies" [class]="tech"></div>
     </div>
+    <div *ngIf="entry.link" class="link">
+      <a [href]="entry.link.link">
+        <span>
+          Check it out here:
+        </span>
+        <div *ngIf="entry.link.logo" class="{{entry.link.logo}}"></div>
+      </a>
+    </div>
   </div>
   <div class="entry-description">{{ entry.description }}</div>
 </div>

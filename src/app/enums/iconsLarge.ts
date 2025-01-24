@@ -1,4 +1,4 @@
-export enum Icons {
+export enum IconsLarge {
   Angular = 'icon-angular-large ',
   React = 'icon-reactjs-large ',
   Cpp = 'icon-cpp-large ',
