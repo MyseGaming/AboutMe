@@ -26,7 +26,7 @@ const PROJECTS: CVEntryData[] = [
   {
     title: 'Entwicklung einer Desktopanwendung zur Steuerung von Hardware',
     site: 'Cloudflight GmbH',
-    technologies: [Icons.Angular, Icons.Typescript, Icons.Node, Icons.Nest, Icons.Electron],
+    technologies: [Icons.Angular, Icons.Typescript, Icons.Nest, Icons.Electron],
     teamSize: 4,
     description: 'Es wurde eine Desktopanwendung entwickelt, die mit Hardware kommuniziert und diese konfigurieren kann. Als Schnittstellen wurden dafür FTP und OPC-UA genutzt. Des Weiteren kommuniziert die Software mit der Cloud, um Daten zu übertragen. Dabei wurden die Frameworks NestJS (Backend), Angular (Frontend) und Electron genutzt.'
   },
