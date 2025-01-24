@@ -5,6 +5,8 @@
   min-width: 0;
   z-index: 0;
 
+  will-change: width, min-width, max-width, transform;
+
   &.shrink-left {
     left: 0;
     right: auto;
@@ -13,7 +15,7 @@
     min-width: 0;
 
     animation-name: shrink;
-    animation-duration: 1s;
+    animation-duration: 1.1s;
   }
 
   &.grow-left {
@@ -37,7 +39,7 @@
     min-width: 0;
 
     animation-name: shrink;
-    animation-duration: 1s;
+    animation-duration: 1.1s;
   }
 
   &.grow-right {
@@ -71,5 +73,17 @@
     min-width: 0;
     max-width: 0;
     width: 0;
+  }
+}
+
+@keyframes start {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: -10vw;
+  }
+  100% {
+    left: 0;
   }
 }

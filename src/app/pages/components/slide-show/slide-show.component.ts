@@ -26,7 +26,6 @@ export class SlideShowComponent implements AfterContentInit {
 
   ngAfterContentInit() {
     this.slides.toArray().forEach((page: SlideComponent, index: number) => {
-      page.pageIndex = index;
       page.currentPage = index === this.currentPage;
       page.subscribeToDisplay(
         this.currentPage$.pipe(mergeMap(currentPage => of(Math.abs(index - currentPage) <= 1)))

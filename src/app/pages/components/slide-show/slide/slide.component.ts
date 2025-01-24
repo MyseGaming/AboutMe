@@ -8,13 +8,14 @@ import {Observable, of} from 'rxjs';
   styleUrl: './slide.component.less'
 })
 export class SlideComponent {
-  @HostBinding("style.--page-index") public pageIndex: number = 0;
   @HostBinding('class.displayed') public displayed: boolean = true;
   @HostBinding('class.grow-left') public growLeft: boolean = false;
   @HostBinding('class.grow-right') public growRight: boolean = false;
   @HostBinding('class.shrink-left') public shrinkLeft: boolean = false;
   @HostBinding('class.shrink-right') public shrinkRight: boolean = false;
   @HostBinding('class.current-page') public currentPage: boolean = false;
+
+  // TODO: Sliding animations can probably be done cleaner
 
 
   public displayed$: Observable<boolean> = of(false);
