@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {NgForOf} from '@angular/common';
-import {routes} from '../../../../app.routes';
 import {Router} from '@angular/router';
+import {routes} from '../../../../app-routing.module';
 
 @Component({
   selector: 'app-linklist',

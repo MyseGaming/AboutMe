@@ -1,12 +1,11 @@
-import {Component} from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
+  standalone: false,
   styleUrl: './app.component.less'
 })
 export class AppComponent {
-  title = 'untitled';
+  title = 'about-me';
 }
