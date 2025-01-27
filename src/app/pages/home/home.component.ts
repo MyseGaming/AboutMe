@@ -25,13 +25,13 @@ import {ProjectsData} from '../../constants/ProjectsData';
 })
 export class HomeComponent {
   personData: ParallaxData = {
-    imageUrl: 'assets/images/MACIO_Kiel_3060.jpg',
+    imageUrl: 'AboutMe/assets/images/MACIO_Kiel_3060.jpg',
     textColor: '',
     blurImage: false,
   }
 
   solutionData: ParallaxData = {
-    imageUrl: 'assets/images/pexels-diva-plavalaguna-6147357.jpg',
+    imageUrl: 'AboutMe/assets/images/pexels-diva-plavalaguna-6147357.jpg',
     textColor: '',
     blurImage: true
   }

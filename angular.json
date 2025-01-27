@@ -63,6 +63,13 @@
               "outputHashing": "all"
             },
             "development": {
+              "assets": [
+                {
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "AboutMe/assets"
+                }
+              ],
               "baseHref": "/",
               "optimization": false,
               "extractLicenses": false,
