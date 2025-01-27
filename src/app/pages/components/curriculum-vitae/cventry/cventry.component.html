@@ -1,0 +1,13 @@
+<div class="title">{{ entry.title }}</div>
+<div class="site">{{ entry.site }}</div>
+<div class="entry">
+  <div class="entry-data">
+    <div *ngIf="entry.location" class="location">{{ entry.location }}</div>
+    <div *ngIf="entry.startDate" class="start-date">{{ entry.startDate }}</div>
+    <div *ngIf="entry.endDate" class="end-date">{{ entry.endDate }}</div>
+    <div *ngIf="entry.technologies" class="technologies">
+      <div *ngFor="let tech of entry.technologies" [class]="tech"></div>
+    </div>
+  </div>
+  <div class="entry-description">{{ entry.description }}</div>
+</div>

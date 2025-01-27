@@ -1,5 +1,79 @@
+@import "src/app/style/colors";
+@import "src/app/style/icons";
+
 :host {
   display: block;
   height: 100%;
   width: 100%;
+
+  font-size: 1.3rem;
+  line-height: 2rem;
+
+  text-align: left;
+  color: @DarkGray;
+
+  .person-data-content {
+    width: 35%;
+    margin-left: auto;
+    padding-top: 18vh;
+
+    .name {
+      font-size: 5rem;
+      line-height: 7.5rem;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+  }
+
+  .additional-data-content {
+    width: 35%;
+    margin-right: auto;
+    margin-left: 10vw;
+    padding-top: 18vh;
+
+    .name {
+      font-size: 3rem;
+      line-height: 3rem;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+  }
+
+
+  .techstack {
+    .techstack-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+
+      background-color: @RegularGray;
+      height: 180px;
+    }
+  }
+
+
+  .cv-data {
+
+    .cv-data-content {
+      padding: 18vh 25vw;
+      background-color: @LightGray;
+
+      .cv-data-text {
+      }
+    }
+  }
+
+  .projects-data {
+
+    .projects-data-content {
+      padding: 18vh 25vw;
+
+      background-color: @RegularGray;
+      color: @DarkGray;
+
+      .cv-data-text {
+      }
+    }
+  }
 }

@@ -1,0 +1,12 @@
+<div class="slides-container">
+  <ng-content>
+  </ng-content>
+</div>
+<div *ngIf="slides.length > 1" class="page-buttons">
+  <app-slide-button *ngFor="let page of slides.toArray(); let i = index"
+                    [active]="currentPage >= i"
+                    [first]="i === 0"
+                    [last]="i===slides.toArray().length - 1"
+                    (click)="showPage(i)"
+  ></app-slide-button>
+</div>

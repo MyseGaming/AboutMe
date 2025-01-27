@@ -1,13 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 @import "app/style/colors";
+@import "app/style/fonts";
 
-html, body {
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Volle Höhe des Viewports */
+  width: 100%;  /* Volle Breite des Viewports */
+}
+
+body {
   margin: 0;
   padding: 0;
   height: 100%; /* Volle Höhe des Viewports */
   width: 100%;  /* Volle Breite des Viewports */
 
-  background-color: @DarkGray;
+  background-color: @LightGray;;
+  color: @DarkGray;
+  font-family: 'Lato', sans-serif;
 }
 
 app-root {
@@ -16,3 +26,23 @@ app-root {
   width: 100%;    /* Deckt die gesamte Breite ab */
 }
 
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900; /* lato-Black */
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; /* lato-Bold */
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; /* lato-Light */
+}
+
+em {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: italic; /* lato-Italic */
+}

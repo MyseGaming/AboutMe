@@ -1,1 +1,68 @@
-<app-header></app-header>
+<app-slide-show>
+  <app-slide>
+    <app-parallax-scroll-section [data]="personData">
+      <div class="person-data-content">
+        <div class="name">Morten Diestelhorst</div>
+        <p class="person-data-text">
+          Hi! Ich bin ein Softwareentwickler mit Fokus auf Embedded C++ sowie Weblösungen für
+          Embedded-Anwendungen. Meine Erfahrung reicht von der Entwicklung hardwarenaher Software bis zur Erstellung
+          moderner Benutzeroberflächen.
+        </p>
+      </div>
+    </app-parallax-scroll-section>
+  </app-slide>
+  <app-slide>
+    <app-parallax-scroll-section [data]="solutionData">
+      <div class="additional-data-content">
+        <div class="name">Mehr Rätsel bitte?</div>
+        <div class="person-data-text">
+          <p>Ich bin neugierig und liebe es, mich durch neue Projekte herauszufordern. Egal ob beruflich oder privat:
+            Ich tauche gerne tief in neue Themen ein, um zu verstehen, wie Dinge funktionieren, sie zu meistern und
+            Ideen umzusetzen.</p>
+          <p>Wenn du mehr darüber erfahren möchtest, schau gerne bei meinen Projekten vorbei!</p>
+        </div>
+      </div>
+    </app-parallax-scroll-section>
+  </app-slide>
+</app-slide-show>
+
+<app-parallax-scroll-section [data]="standardData" class="techstack">
+  <div class="techstack-container">
+    <h3>Technologien: </h3>
+    <div [class]="Icons.Angular">
+    </div>
+    <div [class]="Icons.Typescript"></div>
+    <div [class]="Icons.Html"></div>
+    <div [class]="Icons.Css"></div>
+    <div [class]="Icons.JSON"></div>
+    <div [class]="Icons.XML"></div>
+    <div [class]="Icons.Git"></div>
+    <div [class]="Icons.Nest"></div>
+    <div [class]="Icons.Electron"></div>
+    <div [class]="Icons.Node"></div>
+    <div [class]="Icons.React"></div>
+    <div [class]="Icons.Cpp"></div>
+    <div [class]="Icons.Unreal"></div>
+  </div>
+</app-parallax-scroll-section>
+
+<app-parallax-scroll-section [data]="standardData" class="cv-data">
+  <div class="cv-data-content">
+    <h3>My Journey</h3>
+    <app-curriculum-vitae>
+      <app-cventry class="light" *ngFor="let cvEntry of cvEntries.jobExperience" [entry]="cvEntry">
+      </app-cventry>
+      <app-cventry class="light" *ngFor="let cvEntry of cvEntries.education" [entry]="cvEntry">
+      </app-cventry>
+    </app-curriculum-vitae>
+  </div>
+</app-parallax-scroll-section>
+<app-parallax-scroll-section [data]="standardData" class="projects-data">
+  <div class="projects-data-content">
+    <h3>My Projects</h3>
+    <app-curriculum-vitae>
+      <app-cventry class="light" *ngFor="let project of projects.projects" [entry]="project">
+      </app-cventry>
+    </app-curriculum-vitae>
+  </div>
+</app-parallax-scroll-section>
