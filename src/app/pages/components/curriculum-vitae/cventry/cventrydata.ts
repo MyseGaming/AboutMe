@@ -1,4 +1,4 @@
-import {Icons} from '../../../../enums/icons';
+import {IconsLarge} from '../../../../enums/iconsLarge';
 
 export interface CVEntryData {
   title: string,
@@ -8,6 +8,7 @@ export interface CVEntryData {
   endDate?: string,
   description: string,
   grade?: number
-  technologies?: Icons[]
+  technologies?: IconsLarge[]
   teamSize?: number
+  link?: { logo?: string; link: string }
 }

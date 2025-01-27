@@ -7,7 +7,7 @@ import {CurriculumVitaeComponent} from '../components/curriculum-vitae/curriculu
 import {CVEntryComponent} from '../components/curriculum-vitae/cventry/cventry.component';
 import {NgForOf} from '@angular/common';
 import {CVData} from '../../constants/CVData';
-import {Icons} from '../../enums/icons';
+import {IconsLarge} from '../../enums/iconsLarge';
 import {ProjectsData} from '../../constants/ProjectsData';
 
 @Component({
@@ -43,5 +43,5 @@ export class HomeComponent {
   public readonly cvEntries = CVData;
   public readonly projects = ProjectsData;
 
-  protected readonly Icons = Icons;
+  protected readonly Icons = IconsLarge;
 }
