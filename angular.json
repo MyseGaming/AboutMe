@@ -3,11 +3,18 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "untitled": {
+    "about-me": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "less"
+          "style": "less",
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
         }
       },
       "root": "",
@@ -17,8 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/AboutMe/",
-            "outputPath": "dist/untitled",
+            "outputPath": "dist/about-me",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -36,12 +42,7 @@
             "styles": [
               "src/styles.less"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -71,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "untitled:build:production"
+              "buildTarget": "about-me:build:production"
             },
             "development": {
-              "buildTarget": "untitled:build:development"
+              "buildTarget": "about-me:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -107,6 +108,6 @@
     }
   },
   "cli": {
-    "analytics": "f3e62e42-9aaf-4beb-b675-4a7b378cc67c"
+    "analytics": false
   }
 }
