@@ -1,0 +1,36 @@
+name: Build Angular App
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout Repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16 # Angular benötigt mindestens Node.js 16 (je nach Version)
+
+      # Install Dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # Build Angular App
+      - name: Build Angular app
+        run: npm run build:prod --if-present
+
+      # Optional: Artifacts speichern (z. B. für Hosting oder spätere Nutzung)
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist/
