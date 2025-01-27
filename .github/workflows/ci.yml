@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16 # Angular benötigt mindestens Node.js 16 (je nach Version)
+          node-version: 20 # Angular benötigt mindestens Node.js 16 (je nach Version)
 
       # Install Dependencies
       - name: Install dependencies
