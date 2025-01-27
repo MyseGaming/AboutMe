@@ -15,7 +15,8 @@ export class SlideComponent {
   @HostBinding('class.shrink-right') public shrinkRight: boolean = false;
   @HostBinding('class.current-page') public currentPage: boolean = false;
 
-  // TODO: Sliding animations can probably be done cleaner
+  // TODO: Sliding animation logic can probably be done cleaner
+  // TODO: use transform for better performance
 
 
   public displayed$: Observable<boolean> = of(false);

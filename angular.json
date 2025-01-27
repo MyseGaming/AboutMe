@@ -24,6 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/AboutMe/",
             "outputPath": "dist/about-me",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -33,10 +34,10 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "less",
             "assets": [
-              "src/assets",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+                "output": "assets"
               }
             ],
             "styles": [
@@ -46,6 +47,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/AboutMe/",
               "budgets": [
                 {
                   "type": "initial",
@@ -61,6 +63,14 @@
               "outputHashing": "all"
             },
             "development": {
+              "assets": [
+                {
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "AboutMe/assets"
+                }
+              ],
+              "baseHref": "/",
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
